@@ -1,0 +1,160 @@
+
+/*This stylesheet sets the base colours for all elements */
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+    box-sizing: border-box;
+    color: var(--double-dark-grey);
+}
+
+.modal {
+    background-color: var(--white);
+    margin: auto;
+    margin-top: 5vh;
+}
+
+@media only screen and (min-width: 375px) {
+    body {
+        background-color: #e8edee;
+        background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%23005eb8' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");}
+/*Grid container is used at screen larger sizes, with .modal using a nested grid.
+At mobile size the use of a grid stars with .modal */
+
+.grid-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    }   
+
+
+@media only screen and (min-width: 581px) {
+    .grid-container {
+        min-height: 100vh;
+    }
+}
+
+
+@media only screen and (min-width: 581px) and (max-width: 1100px) {
+    .grid-container {
+        width: 80%;
+        height: auto;
+        min-height: 100vh;
+        margin: auto;
+        border: 0.5px solid var(--dark-grey);
+        border-top: none;
+        border-bottom: none;
+    }   
+}
+
+.header {
+    color: var(--double-dark-grey);
+    }
+
+.nameInput {
+  border: 0.2px solid var(--dark-grey) !important;    
+}
+
+.toggleLabel {
+    border: 1px solid var(--dark-grey);
+}
+
+/* SLIDER CODE FROM W3 */
+
+  
+.slider {
+    background-color: var(--primary-colour);
+}
+  
+.slider:before {
+    background-color: white;
+}
+  
+input:checked + .slider {
+    background-color: var(--secondary-colour);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-colour);
+}
+
+  /* END OF SLIDER CODE FROM W3  */
+
+input[type="button"] {
+/*    background-color: var(--primary-colour); */
+    color: var(--white);
+    border: 0.3px solid var(--dark-grey);
+}
+
+input[type="button"]:hover {
+    border:1px solid #E1B683;
+    color: var(--white);
+}
+
+input[type="button"]:focus {    
+    border:1px solid var(--complimentary-colour);
+    background-color: var(--complimentary-colour);
+    color: var(--white);
+}
+
+.textOutput {
+    border: 0.2px solid var(--dark-grey) !important;
+}
+
+.textOutput:focus {
+    border: 1px solid var(--complimentary-colour);
+}
+
+.fa-clipboard {
+    color: var(--double-dark-grey);
+}
+
+.fa-clipboard:hover {
+    color: var(--double-dark-grey);
+}
+
+.tooltip {
+    visibility: visible;
+    background-color: var(--complimentary-colour);
+    border: 1px solid var(--complimentary-colour);
+}
+
+.tooltipVisable {
+    visibility: visible;
+    background-color: var(--complimentary-colour);
+    color: #fff;
+}
+
+.hidden {
+    visibility: hidden;
+}    
+
+.visable {
+    visibility: visible;
+}
+
+.tooltipText {
+    color: var(--off-white);
+}
+
+.tooltip::after {
+    content: "";
+    border-color: var(--complimentary-colour) transparent transparent transparent;    
+}
+
+.button {
+    background-color: var(--primary-colour);
+}
+
+.green {
+    background-color: var(--secondary-colour);
+}
+
+.blue {
+    background-color: var(--primary-colour);
+}
+
+.copyButton {
+   background-color: transparent;
+}

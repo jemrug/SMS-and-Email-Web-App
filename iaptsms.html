@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IAPT SMS Library</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/colourVariables.css">
+    <link rel="stylesheet" href="css/baseStyles.css">
+    <link rel="stylesheet" media="(max-width: 374px)" href="css/pwpAutoStylesMob.css">
+    <link rel="stylesheet" media="(min-width: 375px) and (max-width: 720px)" href="css/pwpAutoStylesMobLarge.css">
+    <link rel="stylesheet" media="(min-width: 721px) and (max-width: 919px)" href="css/pwpAutoStylesTablet.css">
+    <link rel="stylesheet" media="(min-width: 920px) and (max-width: 1100px)" href="css/pwpAutoStylesLargeTablet.css">
+    <link rel="stylesheet" media="(min-width: 1101px)" href="css/pwpAutoStylesv2.css">
+
+</head>
+<body>
+
+    <div class="grid-container">
+
+        <form class="modal">
+
+            <div class="headerRow">
+                <h1 class="header paddingBottom">IAPT SMS Library</h1>
+            </div>
+
+            <div class="switchContainer">
+                <label class="switch">
+                        <input type="checkbox" id="toggleSwitch">
+                        <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="toggleLabelContainer">
+                <p class="toggleLabel">SMS / Email</p>        
+            </div>
+
+
+            <div class="nameInputContainer">
+                <label for="name" class="nameLabel">Name:</label>
+                <input type="text" name="name" class="nameInput" id="nameInput">    
+            </div>
+
+            <p class="nameGuidance paddingBottom">First name only - do not add patient identifying surname</p>
+
+            <div class="buttonContainer">
+                    <input type="button" value="&nbsp;DNA&nbsp;" name="DNA" class="button" id="DNA"/>             
+                    <input type="button" value="risk info" name="risk" class="button" id="risk"/>
+                    <input type="button" value="drug service" name="drugsService" class="button" id="drugsService"/>
+                    <input type="button" value="Counselling South" name="counsellingNorthampton" class="button" id="counsellingNorthampton"/>
+                    <input type="button" value="Counselling North" name="counsellingKettering" class="button" id="counsellingKettering"/>            
+                    <input type="button" value="Depression" name="depression" class="button" id="depression"/>
+                    <input type="button" value="Anxiety" name="anxiety" class="button" id="anxiety"/>
+                    <input type="button" value="Opt-In" name="optIn" class="button" id="optIn"/>
+            </div>
+
+            <div class="tooltip hidden" id="tooltip">
+                <span class="tooltipText hidden" id="tooltipText">Copy to clipboard</span>
+            </div>
+
+            <div class="copyButtonContainer">
+                <button value="copy" class="copyButton" id="copyButton">
+                        <i class="fa fa-clipboard" id="fa-clipboard" aria-hidden="true"></i>
+                </button>            
+            </div>
+
+            <textarea placeholder="..." class="textOutput" id="textOutput"></textarea>
+
+        </form>
+        <div class="modalShadow"></div>
+
+    </div>
+
+<!--JAVASCRIPT BELOW HERE-->
+
+    <script src="js/pwpAutomatic.js"></script>
+    <script src="js/emailText.js"></script>    
+</body>
+</html>

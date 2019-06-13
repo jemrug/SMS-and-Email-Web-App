@@ -1,0 +1,41 @@
+/* Colour Variables */
+
+/* NHS Colours */
+:root {
+    --primary-colour:#005EB8;
+    --primary-dark: #003087;
+    --primary-light: #41B6E6;
+
+    --secondary-colour: #009639;
+    --secondary-dark: #006747;
+    --secondary-light: #78BE20;
+    
+    --grey: #E8EDEE;
+    --dark-grey: #768692;
+    --double-dark-grey: #425563;
+    --nhsblack: #231f20;
+
+    --white: #FFFFFF;
+    --off-white: #F3F4F6;   
+    --off-white-two: hsl(220, 14%, 91%);
+
+    --complimentary-colour: #AE2573;
+    --complimentary-colour-light: hsl(326, 65%, 57%);
+    --complimemntary-two: #FAE100;
+
+}
+
+/* Original colours
+
+:root {
+    --primary-colour: #b4c6d0;
+    --secondary-colour: #dee6e9;
+    --grey: #b5c7d1;
+    --dark-grey: #495660;
+    --double-dark-grey: hsl(206, 14%, 23%);
+    --off-white: #F3F4F6;   
+    --off-white-two: hsl(220, 14%, 91%);
+    --complimentary-colour: #E1B683;
+    --complimentary-colour-light:hsl(33, 61%, 80%);
+
+} */

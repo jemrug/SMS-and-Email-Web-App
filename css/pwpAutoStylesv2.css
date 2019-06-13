@@ -1,0 +1,316 @@
+/*Global Styles */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*Grid container at all sizes */
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: 2fr 6fr 2fr;
+}
+
+/*Form container and form styles */
+
+.modal {
+    grid-row: 2;
+    grid-column: 2 / 3;
+    border: 0.5px solid var(--dark-grey);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 2fr 20px 4fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
+
+    width: 760px;
+    min-height: 440px;
+    max-height: 450px;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+.modalShadow {
+    grid-row: 2;
+    grid-column: 2 / 3;
+    visibility: hidden;
+
+    border-radius: 20px;
+    background-color: var(--dark-grey);
+    opacity: 0.8;
+    width: 760px;
+    min-height: 440px;
+    max-height: 75vh;
+
+    position: relative;
+    left: 8px;
+    top: 18px;
+}  
+
+.paddingBottom {
+    padding-bottom: 12px;
+  }
+
+.headerRow {
+    grid-row: 1;
+    grid-column: 2 / span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}      
+
+.header {
+    position: relative;
+    top: 24px;
+    padding-bottom: 24px;
+    font-size: 4.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nameLabel {
+      position: relative;
+      top: -5px;
+}
+  
+  .nameInput {
+    position: relative;
+    left: 45px;
+    max-width: 200px;
+    border: 0.2px solid var(--dark-grey) !important;    
+}
+
+.nameGuidance {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.nameInputContainer {
+    grid-row: 2;
+    grid-column: 2 / span 1;
+    display: flex;
+    align-items: center;
+}
+
+.nameGuidance {
+    grid-row: 3;
+    grid-column: 2 / span 1;
+}
+
+.switchContainer {
+    grid-row: 2;
+    grid-column: 2;
+    position: relative;
+    right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 4px;
+    width: 97%;
+}
+
+.toggleLabelContainer {
+    display: flex;
+    grid-column: 2;    
+    position: relative;
+    right: 40px;
+    top: 50px;
+    justify-content: flex-end;
+    width: 84%;
+    height: 100%;
+    grid-row: 2;
+    position: relative;
+    left: 46px;
+}
+
+.toggleLabel {
+    padding: 0.8rem;
+    line-height: 150%;
+    max-height: 30px;
+    padding-bottom: 22px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 0.3px solid var(--dark-grey); 
+    font-size: 1rem;
+}
+
+/* SLIDER CODE FROM W3 */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-colour);
+  }
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+  /* END OF SLIDER CODE FROM W3  */
+
+.buttonContainer {
+    grid-row: 4;
+    grid-column: 2 / span 2;
+    align-items: center;
+}
+
+.textOutput {
+    grid-row: 6;
+    grid-column: 2 / span 1;
+    height:80px;
+    width: 555px;
+    border: 0.2px solid var(--dark-grey) !important;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.textOutput:focus {
+    border: 1px solid var(--complimentary-colour);
+}
+
+.nameInput:focus {
+    outline: none !important;
+    border: 1px solid var(--complimentary-colour) !important;
+}
+
+.buttonRow {
+    margin: 0px;
+    padding: 0px;
+}
+
+input[type="button"]:hover {
+/*    border:1px solid var(--primary-light); */
+}
+
+input[type="button"] {
+/*    border: 0.3px solid var(--dark-grey); */
+}
+
+.copyButtonContainer {
+    grid-row: 6;
+    grid-column: 3;
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+    left: -20px;
+}
+
+.copyButton {
+    height: 52% !important;
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.fa-clipboard {
+    font-size: 3rem;
+    position: relative;
+    left: -12px;
+    top: 5px;
+}
+
+.fa-clipboard:hover {
+    font-size: 3.1rem;
+}
+
+.copyButton:hover {
+    transform: none;
+}
+
+#counsellingNorthampton {
+    padding-left: 22px;
+    padding-right: 22px;
+
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 132px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;  
+    position: absolute;
+    right: 21%;
+    top: 358px;
+}
+
+.tooltipVisable {
+    visibility: visible;
+    width: 132px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;  
+    position: absolute;
+    right: 264px;
+    top: 358px;}
+
+.hidden {
+    visibility: hidden;
+}    
+
+.visable {
+    visibility: visible;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    margin-left: -9px;
+    border-width: 10px;
+    border-style: solid;
+}
+
